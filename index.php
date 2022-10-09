@@ -15,17 +15,11 @@
 
     <img src="img/logo3.png" class="image" alt="">
       <form action="">
-        <input type="text" name="pesquisa" class="pesq" placeholder="Pesquisar alguém..."> <input type="submit" value="Buscar">
-       <a href=""><img src="img/perfil.png" alt=""></a>
-       <a href=""><img src="img/chat.png" alt=""></a>
+        <input type="text" name="pesquisa" class="pesq" autocomplete="off" placeholder="Pesquisar alguém..."> <input type="submit" value="Buscar">
+       <a href=""><img src="img/perfil.png" alt="" class="menu"></a>
+       <a href=""><img src="img/chat.png" alt="" class="menu"></a>
       </form>
     </div>
- <br>
-    <div class="corpo">
-
-    <form action="">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-    </form>
-    </div>
+    <br>
 </body>
 </html>

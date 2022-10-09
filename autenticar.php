@@ -14,5 +14,8 @@ $contacto=$_SESSION['contacto'];
 $email=$_SESSION['email'];
 $senha=$_SESSION['senha'];
 $data = $_SESSION['data'];
+
 }
+
+
 ?>
