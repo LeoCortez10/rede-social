@@ -20,6 +20,6 @@
        <a href=""><img src="img/chat.png" alt="" class="menu"></a>
       </form>
     </div>
-    <br>
+    <br /><br /><br /><br /><br /><br />
 </body>
 </html>

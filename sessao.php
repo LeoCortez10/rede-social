@@ -29,7 +29,7 @@ if(isset($_POST['entrar'])){
             $_SESSION['senha']=$dados['senha'];
             $_SESSION['data']=$dados['data_nasc'];
 
-           header("location:index.php");
+           header("location:mindex.php");
         }
         else{
 

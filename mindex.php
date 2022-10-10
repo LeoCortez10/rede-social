@@ -1,7 +1,8 @@
 <?php
+require_once 'mindex.php';
 include("conexao.php");
 include("index.php");
-echo" <br>";
+echo" <br /> <br />";
 
 $publicado=mysqli_query($conectar, 'SELECT *FROM publicacoes ORDER BY id DESC');
 
@@ -51,7 +52,7 @@ if (isset($_POST['publicar'])) {
         header("location:mindex.php");
       }
       else{
-        echo "<script> alert('Alguma coisa não correu bem.. </br> Tente Mais Tarde!');</script>";
+        echo "<script> alert('Alguma coisa não correu bem.. <br/> Tente Mais Tarde!');</script>";
       }
       
     }
@@ -70,7 +71,7 @@ if (isset($_POST['publicar'])) {
     <title>Document</title>
 </head>
 <body>
-  <br><br><br><br><br><br>
+  
 <div class="corpo">
 <?php
 ?>
@@ -91,28 +92,47 @@ while ($publico=mysqli_fetch_assoc($publicado)) {
   $email=$publico['usuario'];
   $sabera=mysqli_query($conectar, "SELECT *FROM usuario WHERE email='$email'");
   $saber=mysqli_fetch_assoc($sabera);
-  $nome= $saber['nome']."".$saber['apelido'];
+  $nome= $saber['nome']. "  " .$saber['apelido'];
   $id= $publico['id'];
 
   if($publico['imagem']== 0){
 
     echo '<div class="publico" id="'.$id.'">
-    <p><a href="">'.$nome.'</a> - '.$publico["data"].'</p>
+    <p><a href="perfil.php?id='.$saber['id'].'">'.$nome.'</a> - '.$publico["data"].'</p>
 
    <span>'.$publico['texto'].'</span> <br />
     </div>';
   }
   else{
     echo '<div class="publico" id="'.$id.'">
-    <p><a href="">'.$nome.'</a> - '.$publico["data"].'</p>
+    <p><a  href="perfil.php?id='.$saber['id'].'">'.$nome.'</a> - '.$publico["data"].'</p>
 
    <span>'.$publico['texto'].'</span> <br />
 
-   <p>'.$publico['imagem'].'</p> <br />
+
+   <img src="fotos/'.$publico['imagem'].'"> 
     </div>';
   }
 }
 
 ?>
+<br />
+
+<div class="rodape">
+  <form method="GET">
+    <input type="submit" value="Terminar Sessão" name="sair">
+  </form>
+  <?php
+  if (isset($_GET['sair'])) {
+
+    if (isset($_SESSION)) {
+       session_destroy();
+    }
+    
+    header("location:login.php");
+  }
+  ?>
+<h4>&copy; 2022- Todos os Direitos Reservados</h4></div>
+<br />
 </body>
 </html>

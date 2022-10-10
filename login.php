@@ -8,18 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="sessao.php" method="POST" >
 
-      <img src="img/logo3.png" alt="">
-      <br>
-      <input type="email" name="email" placeholder="E-mail">
-      <br>
-      <input type="password" name="senha" placeholder="Senha">
-      <br>
-      
-      <input type="submit" name="entrar" value="Entrar">
+  <div class="log">
+      <form action="sessao.php" method="POST" >
 
-      <h4>Ainda não é cadastreado? <a href="cadastro.html"> Cadastra-te Já</a></h4>
-    </form>
+        <img src="img/logo3.png" alt="">
+        <br>
+        <input type="email" name="email" placeholder="E-mail">
+        <br>
+        <input type="password" name="senha" placeholder="Senha">
+        <br>
+        
+        <input type="submit" name="entrar" value="Entrar">
+
+        <h4>Ainda não é cadastreado? <a href="cadastrar.php"> Cadastra-te Já</a></h4>
+      </form>
+  </div>
 </body>
 </html>

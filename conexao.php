@@ -6,5 +6,4 @@ $banco="rede";
 
 $conectar=mysqli_connect($local, $usuario, $senha, $banco);
 
-
 ?>

@@ -9,30 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    
-<form method="POST">
+    <div class="cad">
+            <form method="POST">
 
-    <img src="img/logo3.png">
-    <br>
-    <input type="text" name="nome" clas="" placeholder="Nome...">
-    <br>
-    <input type="text" name="apelido"  placeholder="Apelido..">
-    <br>
-    <input type="email" name="email" placeholder="E-mail">
-    <br>
-    <input type="text" name="contacto" placeholder="Contacto">
-    <br>
-    <input type="password" name="senha" placeholder="Senha">
-    <br>
-    <input type="password" name="confSenha" placeholder="Comfirmar Senha">
-    <br>
-    <input type="date" name="data">
-    <br>
-    <input type="submit" name="salvar" value="Cadastrar">
+                <img src="img/logo3.png">
+                <br>
+                <input type="text" name="nome" clas="" placeholder="Nome...">
+                <br>
+                <input type="text" name="apelido"  placeholder="Apelido..">
+                <br>
+                <input type="email" name="email" placeholder="E-mail">
+                <br>
+                <input type="text" name="contacto" placeholder="Contacto">
+                <br>
+                <input type="password" name="senha" placeholder="Senha">
+                <br>
+                <input type="password" name="confSenha" placeholder="Comfirmar Senha">
+                <br>
+                <input type="date" name="data">
+                <br>
+                <input type="submit" name="salvar" value="Cadastrar">
 
-    <h4>Já é cadastrado? <a href="login.html">Faça o Login</a></h4>
+                <h4>Já é cadastrado? <a href="login.php">Faça o Login</a></h4>
 
-</form>
+            </form>
+    </div>
 </body>
 </html>
 
