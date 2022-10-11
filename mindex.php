@@ -119,17 +119,16 @@ while ($publico=mysqli_fetch_assoc($publicado)) {
 <br />
 
 <div class="rodape">
-  <form method="GET">
+  <form method="POST">
     <input type="submit" value="Terminar Sessão" name="sair">
   </form>
   <?php
-  if (isset($_GET['sair'])) {
+  if (isset($_POST['sair'])) {
 
     if (isset($_SESSION)) {
        session_destroy();
     }
-    
-    header("location:login.php");
+    echo "<script> window.location.href='login.php';</script>";
   }
   ?>
 <h4>&copy; 2022- Todos os Direitos Reservados</h4></div>
