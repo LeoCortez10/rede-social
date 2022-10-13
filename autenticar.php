@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -17,5 +18,7 @@ $data = $_SESSION['data'];
 
 }
 
+echo"Será que alterou ";
+echo "Baka";
 
 ?>
